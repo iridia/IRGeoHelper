@@ -47,7 +47,7 @@
 /* Begin PBXFileReference section */
 		FF1C08D6159111BF0070C74F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FF1C08D9159111C20070C74F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		FF1C08DB159112060070C74F /* IRMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; name = IRMapView.h; path = IRGeoHelper/IRMapView.h; sourceTree = "<group>"; };
+		FF1C08DB159112060070C74F /* IRMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRMapView.h; path = IRGeoHelper/IRMapView.h; sourceTree = "<group>"; };
 		FF1C08DC159112060070C74F /* IRMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IRMapView.m; path = IRGeoHelper/IRMapView.m; sourceTree = "<group>"; };
 		FF1C08E1159112F40070C74F /* IRGeoInterceptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRGeoInterceptor.h; path = IRGeoHelper/IRGeoInterceptor.h; sourceTree = "<group>"; };
 		FF1C08E2159112F40070C74F /* IRGeoInterceptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IRGeoInterceptor.m; path = IRGeoHelper/IRGeoInterceptor.m; sourceTree = "<group>"; };
@@ -334,7 +334,10 @@
 				DSTROOT = /tmp/IRGeoHelper.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IRGeoHelper/IRGeoHelper-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -346,7 +349,10 @@
 				DSTROOT = /tmp/IRGeoHelper.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IRGeoHelper/IRGeoHelper-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};

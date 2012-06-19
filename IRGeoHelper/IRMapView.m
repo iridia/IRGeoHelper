@@ -45,33 +45,70 @@
 
 }
 
-- (void) commonInit {
+- (void) awakeFromNib {
 
-	_interceptor = [IRGeoInterceptor new];
-	_interceptor.middleMan = self;
+	[super awakeFromNib];
 	
-	[super setDelegate:(id<MKMapViewDelegate>)_interceptor];
+	[self commonInit];
+
+}
+
+- (void) commonInit {
+	
+	[self interceptor];
+
+}
+
+- (IRGeoInterceptor *) interceptor {
+
+	if (!_interceptor) {
+	
+		_interceptor = [IRGeoInterceptor new];
+		_interceptor.middleMan = self;
+	
+		[super setDelegate:(id<MKMapViewDelegate>)_interceptor];
+	
+	}
+	
+	return _interceptor;
 
 }
 
 - (id<MKMapViewDelegate>) delegate {
 	
-	NSLog(@"%s\n%@\n%@\n%@", __PRETTY_FUNCTION__, [NSThread callStackSymbols], [NSThread callStackReturnAddresses], _interceptor);
-
-
 	return _interceptor.receiver;
+
+}
+
+- (void) setDelegate:(id<MKMapViewDelegate>)delegate {
+
+	_interceptor.receiver = delegate;
+	
+}
+
+- (void) mapView:(MKMapView *)mapView regionWillChangeAnimated:(BOOL)animated {
+
+	//	?
+
+	[(id<MKMapViewDelegate>)_interceptor.receiver mapView:mapView regionWillChangeAnimated:animated];
 
 }
 
 - (void) setRegion:(MKCoordinateRegion)region animated:(BOOL)animated completion:(void(^)(void))block {
 
+	//	?
+
 }
 
 - (void) setCenterCoordinate:(CLLocationCoordinate2D)coordinate animated:(BOOL)animated completion:(void(^)(void))block {
 
+	//	?
+
 }
 
 - (void) setVisibleMapRect:(MKMapRect)mapRect edgePadding:(UIEdgeInsets)insets animated:(BOOL)animate completion:(void(^)(void))block {
+
+	//	?
 
 }
 
