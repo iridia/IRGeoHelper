@@ -1,0 +1,82 @@
+.DS_Store
+.dropbox
+
+design/*.png
+design/*.png*
+
+preview/*.png
+preview/*.png*
+
+frontend/*.tmproj
+
+
+# Sparkle
+
+dsa_priv.pem
+
+
+# Xcode Config
+
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+*.xcuserdatad
+*.xcworkspacedata
+*.xcuserstate
+.LSOverride
+
+
+# Generated files
+
+VersionX-revision.h
+
+
+# Builds
+
+build/
+Build/
+*.[oa]
+
+
+# Other SCMs
+
+.hg
+.svn
+CVS
+
+
+# Backups
+
+*~.nib
+*.swp
+*~
+*(Autosaved).rtfd/
+
+Backup[ ]of[ ]*.pages/
+Backup[ ]of[ ]*.key/
+Backup[ ]of[ ]*.numbers/
+
+*.timemachine.supported
+
+Archives/*droplet.app
+Archives/*.ipa
+Design/*.png
+
+build/*
+Releases/build-*
+*.pbxuser
+*.mode1v3
+*.perspectivev3
+DerivedData/*
+
+# Automation
+wammer_ios_auto_build
+wammer_ios_auto_build_master
+testFlightCredentials
+
+# localize.py
+*.strings.new
+*.strings.old
