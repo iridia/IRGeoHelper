@@ -7,3 +7,7 @@
 //
 
 #import "IRMapView.h"
+
+extern BOOL IRCoordinateRegionEqualToRegion (MKCoordinateRegion lhs, MKCoordinateRegion rhs);
+extern BOOL IRLocationCoordinateEqualToCoordinate (CLLocationCoordinate2D lhs, CLLocationCoordinate2D rhs);
+extern BOOL IRCoordinateSpanEqualToSpan (MKCoordinateSpan lhs, MKCoordinateSpan rhs);
