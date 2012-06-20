@@ -37,4 +37,5 @@ Yes, you *can* nest them.  And, also yes, if you invoke these methods when the u
 ## Credits
 
 *	[Evadne Wu](http://twitter.com/evadne) at [Iridia Productions](http://iridia.tw) / [Waveface Inc](http://waveface.com).  Initial Implementation / Current Maintainer
-*	[Stan Chang Khin Boon](http://twitter.com/lxcid).  Contributor.
+*	[Stan Chang Khin Boon (@lxcid)](http://twitter.com/lxcid).  Contributor.
+*	[emp](http://stackoverflow.com/users/114737/emp).  Initial implementation for [Delegateion Interception](http://stackoverflow.com/questions/1618474/intercept-method-call-in-objective-c).
