@@ -131,7 +131,13 @@ static NSString * const kRegionDidChangeNotificationName = @"IRMapViewDidChangeR
 
 - (void) setDelegate:(id<MKMapViewDelegate>)delegate {
 
+	if (_interceptor.receiver != delegate)
+		[super setDelegate:nil];
+
 	_interceptor.receiver = delegate;
+	
+	if ([super delegate] != _interceptor)
+		[super setDelegate:(id<MKMapViewDelegate>)_interceptor];
 	
 }
 
