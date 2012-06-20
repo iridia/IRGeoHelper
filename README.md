@@ -34,6 +34,10 @@ Or this:
 
 Yes, you *can* nest them.  And, also yes, if you invoke these methods when the user is scrolling, IRMapView is polite enough to animate only after the user has finished scrolling.  If you would rather not do anything, you can observe the (currently private) `changingRegion` property on the map view, which is a BOOL.  It participates in KVO.
 
+## Licensing
+
+This project is in the public domain.  You can use it and embed it in whatever application you sell, and you can use it for evil.  However, it is appreciated if you provide attribution, by linking to the project page ([https://github.com/iridia/IRGeoHelper](https://github.com/iridia/IRGeoHelper)) from your application.
+
 ## Credits
 
 *	[Evadne Wu](http://twitter.com/evadne) at [Iridia Productions](http://iridia.tw) / [Waveface Inc](http://waveface.com).  Initial Implementation / Current Maintainer
