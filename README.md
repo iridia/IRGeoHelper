@@ -36,5 +36,5 @@ Yes, you *can* nest them.  And, also yes, if you invoke these methods when the u
 
 ## Credits
 
-[Evadne Wu](http://twitter.com/evadne) at [Iridia Productions](http://iridia.tw) / [Waveface Inc](http://waveface.com).
-
+*	[Evadne Wu](http://twitter.com/evadne) at [Iridia Productions](http://iridia.tw) / [Waveface Inc](http://waveface.com).  Initial Implementation / Current Maintainer
+*	[Stan Chang Khin Boon](http://twitter.com/lxcid).  Contributor.
