@@ -292,7 +292,7 @@ static NSString * const kRegionDidChangeNotificationName = @"IRMapViewDidChangeR
 	
 	__weak IRMapView *wSelf = self;
 	
-	__weak id wListener = [self waitForNotification:kRegionDidChangeNotificationName object:self timeout:1.0f validator:^BOOL(NSNotification *note) {
+	[self waitForNotification:kRegionDidChangeNotificationName object:self timeout:1.0f validator:^BOOL(NSNotification *note) {
 	
 		//	for posterity
 		
@@ -309,28 +309,6 @@ static NSString * const kRegionDidChangeNotificationName = @"IRMapViewDidChangeR
 		block();
 		
 	}];
-
-#if 0
-
-	//	This is not better than simply NOT issuing changes for invalid request, or those that will not make
-	//	any visible difference
-	
-	[self waitForNotification:kRegionWillChangeNotificationName object:self timeout:0.5f validator:nil handler:^(NSNotification *note) {
-
-		if (note)
-			return;
-		
-		if (wListener) {
-			[[NSNotificationCenter defaultCenter] removeObserver:wListener];
-			[wSelf.listeners removeObjectsForKeys:[wSelf.listeners allKeysForObject:wListener]];
-		}
-		
-		if (block)
-			block();
-		
-	}];
-
-#endif
 	
 }
 
