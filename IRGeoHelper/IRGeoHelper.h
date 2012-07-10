@@ -11,3 +11,6 @@
 extern BOOL IRCoordinateRegionEqualToRegion (MKCoordinateRegion lhs, MKCoordinateRegion rhs);
 extern BOOL IRLocationCoordinateEqualToCoordinate (CLLocationCoordinate2D lhs, CLLocationCoordinate2D rhs);
 extern BOOL IRCoordinateSpanEqualToSpan (MKCoordinateSpan lhs, MKCoordinateSpan rhs);
+
+extern NSString * IRStringFromMKMapRect (MKMapRect mapRect);
+extern NSString * IRStringFromCLLocationCoordinate (CLLocationCoordinate2D coordinate);

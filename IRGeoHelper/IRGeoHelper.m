@@ -28,3 +28,15 @@ BOOL IRCoordinateSpanEqualToSpan (MKCoordinateSpan lhs, MKCoordinateSpan rhs) {
 		(lhs.longitudeDelta == rhs.longitudeDelta);
 
 }
+
+NSString * IRStringFromMKMapRect (MKMapRect mapRect) {
+
+	return [NSString stringWithFormat:@"{{%f, %f}, {%f, %f}}", mapRect.origin.x, mapRect.origin.y, mapRect.size.width, mapRect.size.height];
+
+}
+
+NSString * IRStringFromCLLocationCoordinate (CLLocationCoordinate2D coordinate) {
+
+	return [NSString stringWithFormat:@"{%f, %f}", coordinate.latitude, coordinate.longitude];
+
+}
